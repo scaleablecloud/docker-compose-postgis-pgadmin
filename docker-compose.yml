@@ -3,11 +3,12 @@ version: '3.5'
 services:
   postgres:
     container_name: postgres_container
-    image: postgres:11.5
+    image: mdillon/postgis:11
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
       PGDATA: /data/postgres
+      ALLOW_IP_RANGE: 0.0.0.0/0
     volumes:
       - postgres:/data/postgres
     ports:
