@@ -5,6 +5,6 @@ kpspass
 ## Access PGAdmin
 http://localhost:5555
 
-khawar@appiskey.com
+khawar@email.com
 
 kpapass
