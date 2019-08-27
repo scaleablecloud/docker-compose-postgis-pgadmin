@@ -11,6 +11,7 @@ services:
       ALLOW_IP_RANGE: 0.0.0.0/0
     volumes:
       - postgres:/data/postgres
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     networks:
